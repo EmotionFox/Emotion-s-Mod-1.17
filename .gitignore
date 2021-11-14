@@ -40,4 +40,4 @@ runData.launch
 runServer.launch
 src/generated/*
 src/test/*
-src/main/resources/assets/emomod/textures/*
+src/main/resources/assets/emomod/textures/
