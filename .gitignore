@@ -38,6 +38,6 @@ LICENSE.txt
 runClient.launch
 runData.launch
 runServer.launch
-src/generated
-src/test
-src/main/resources
+src/generated/*
+src/test/*
+src/main/resources/assets/emomod/textures/*
