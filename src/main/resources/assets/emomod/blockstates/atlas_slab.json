@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "emomod:block/atlas_slab" },
+        "type=top": { "model": "emomod:block/atlas_slab_top" },
+        "type=double": { "model": "emomod:block/planks_atlas" }
+    }
+}

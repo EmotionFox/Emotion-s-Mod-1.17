@@ -1,0 +1,29 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "ZWZ",
+    "SSS"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "Y": {
+      "item": "minecraft:milk_bucket"
+    },
+    "W": {
+      "item": "minecraft:egg"
+    },
+    "Z": {
+      "item": "minecraft:sugar"
+    },
+    "S": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "emomod:cake_choco"
+  }
+}

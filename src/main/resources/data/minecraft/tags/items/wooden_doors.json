@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "emomod:cherry_door",
+    "emomod:pear_door",
+    "emomod:orange_door",
+    "emomod:atlas_door",
+    "emomod:pine_door",
+    "emomod:coco_door",
+    "emomod:dream_door"
+  ]
+}

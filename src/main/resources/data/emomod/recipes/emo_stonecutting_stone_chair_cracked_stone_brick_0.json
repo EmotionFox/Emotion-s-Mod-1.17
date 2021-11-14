@@ -1,0 +1,10 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:stonecutting",
+  "group": "stone_chair",
+  "ingredient": {
+    "item": "minecraft:cracked_stone_bricks"
+  },
+  "result": "emomod:stone_chair_cracked_stone_brick",
+  "count": 2
+}

@@ -1,0 +1,9 @@
+{
+	"variants": 
+	{
+		"facing=north" : {"model": "emomod:block/wood_nightstand_coco"},
+		"facing=south" : {"model": "emomod:block/wood_nightstand_coco", "y": 180 },
+		"facing=east" : {"model": "emomod:block/wood_nightstand_coco", "y": 90 },
+		"facing=west" : {"model": "emomod:block/wood_nightstand_coco", "y": 270 }
+	}
+}

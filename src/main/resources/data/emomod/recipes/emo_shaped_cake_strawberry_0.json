@@ -1,0 +1,29 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WYW",
+    "XZX",
+    "VVV"
+  ],
+  "key": {
+    "W": {
+      "item": "emomod:berry_strawberry"
+    },
+    "Y": {
+      "item": "minecraft:milk_bucket"
+    },
+    "X": {
+      "item": "minecraft:sugar"
+    },
+    "Z": {
+      "item": "minecraft:egg"
+    },
+    "V": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "emomod:cake_strawberry"
+  }
+}

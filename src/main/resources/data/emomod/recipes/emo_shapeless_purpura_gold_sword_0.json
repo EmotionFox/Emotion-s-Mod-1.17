@@ -1,0 +1,32 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "emomod:purpura_sword"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "result": {
+    "item": "emomod:purpura_gold_sword",
+    "nbt":
+    {
+      "Enchantments":
+      [
+        {
+          "id": "minecraft:looting",
+          "lvl": 3
+        },
+        {
+          "id": "minecraft:unbreaking",
+          "lvl": 1
+        }
+      ]
+    }
+  }
+}

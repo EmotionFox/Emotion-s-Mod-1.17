@@ -1,0 +1,6 @@
+{
+    "parent": "block/button_pressed",
+    "textures": {
+        "texture": "emomod:block/planks_dream"
+    }
+}

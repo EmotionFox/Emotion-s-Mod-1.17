@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":    { "model": "emomod:block/wood_coco" },
+        "axis=z":     { "model": "emomod:block/wood_coco", "x": 90 },
+        "axis=x":     { "model": "emomod:block/wood_coco", "x": 90, "y": 90 }
+    }
+}

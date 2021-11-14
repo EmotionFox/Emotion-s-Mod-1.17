@@ -1,0 +1,9 @@
+{
+    "variants": 
+    {
+        "facing=south": { "model": "emomod:block/box_window_tulip_red" },
+        "facing=north": { "model": "emomod:block/box_window_tulip_red", "y": 180 },
+        "facing=east":  { "model": "emomod:block/box_window_tulip_red", "y": 270 },
+        "facing=west":  { "model": "emomod:block/box_window_tulip_red", "y": 90 }
+    }
+}

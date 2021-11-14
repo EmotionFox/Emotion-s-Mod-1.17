@@ -1,0 +1,9 @@
+{ 
+    "variants": 
+    { 
+        "enabled=true,crafting=true": { "model": "emomod:block/crafter_work" },
+        "enabled=true,crafting=false": { "model": "emomod:block/crafter" },
+        "enabled=false,crafting=true": { "model": "emomod:block/crafter_lock" },
+        "enabled=false,crafting=false": { "model": "emomod:block/crafter_lock" }
+    }
+}

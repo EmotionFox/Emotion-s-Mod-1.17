@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "emomod:log_coco",
+    "emomod:wood_coco",
+    "emomod:stripped_coco_log",
+    "emomod:stripped_coco_wood"
+  ]
+}

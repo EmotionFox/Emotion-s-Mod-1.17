@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "emomod:item/purpura_staff",
+        "layer1": "emomod:item/purpura_staff_overlay"
+    }
+}

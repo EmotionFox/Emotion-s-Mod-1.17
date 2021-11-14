@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": [
+      {
+        "item": "emomod:lume_stone"
+      },
+      {
+        "item": "minecraft:charcoal"
+      }
+    ]
+  },
+  "result": {
+    "item": "minecraft:torch",
+    "count": 8
+  }
+}

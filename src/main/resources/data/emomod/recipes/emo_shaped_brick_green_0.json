@@ -1,0 +1,21 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XYX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:bricks"
+    },
+    "Y": {
+      "item": "minecraft:green_dye"
+    }
+  },
+  "result": {
+    "item": "emomod:brick_green",
+    "count": 8
+  }
+}

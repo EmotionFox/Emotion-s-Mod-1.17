@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "emomod:log_dream",
+    "emomod:wood_dream",
+    "emomod:stripped_dream_log",
+    "emomod:stripped_dream_wood"
+  ]
+}

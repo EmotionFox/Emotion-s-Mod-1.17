@@ -1,0 +1,18 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "emomod:bowl_glass"
+    },
+    {
+      "item": "emomod:fruit_tomato"
+    },
+    {
+      "item": "emomod:fruit_tomato"
+    }
+  ],
+  "result": {
+    "item": "emomod:juice_tomato"
+  }
+}

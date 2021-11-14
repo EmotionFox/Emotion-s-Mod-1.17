@@ -1,0 +1,18 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "emomod:log_pine"
+    }
+  },
+  "result": {
+    "item": "emomod:wood_pine",
+    "count": 3
+  }
+}

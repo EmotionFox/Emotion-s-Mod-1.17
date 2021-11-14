@@ -1,0 +1,18 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "emomod:planks_pine"
+    }
+  },
+  "result": {
+    "item": "emomod:pine_door",
+    "count": 3
+  }
+}

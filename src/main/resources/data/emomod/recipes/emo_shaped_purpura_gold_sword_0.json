@@ -1,0 +1,37 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XZ",
+    "XZ",
+    "Y "
+  ],
+  "key": {
+    "X": {
+      "item": "emomod:purpura_shard"
+    },
+    "Y": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Z": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "emomod:purpura_gold_sword",
+    "nbt":
+    {
+      "Enchantments":
+      [
+        {
+          "id": "minecraft:looting",
+          "lvl": 3
+        },
+        {
+          "id": "minecraft:unbreaking",
+          "lvl": 1
+        }
+      ]
+    }
+  }
+}

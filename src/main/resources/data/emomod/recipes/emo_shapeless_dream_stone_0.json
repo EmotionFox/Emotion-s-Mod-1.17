@@ -1,0 +1,29 @@
+{
+  "_comment": "Edited with Recipes Creator v0.5",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+
+      "item": "minecraft:emerald"
+    },
+    {
+
+      "item": "emomod:purpura_shard"
+    },
+    {
+
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+
+      "item": "minecraft:diamond"
+    },
+    {
+
+      "item": "minecraft:redstone"
+    }
+  ],
+  "result": {
+    "item": "emomod:dream_stone"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "emomod:log_pine",
+    "emomod:wood_pine",
+    "emomod:stripped_pine_log",
+    "emomod:stripped_pine_wood"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "emomod:block/wood_chair",
+    "textures": 
+    {
+        "wood": "emomod:block/planks_orange"
+    }
+}

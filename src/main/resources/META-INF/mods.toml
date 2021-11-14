@@ -1,0 +1,29 @@
+modLoader="javafml"
+# Forge for 1.17.1 is version 37
+loaderVersion="[37,)"
+license="All rights reserved"
+showAsResourcePack=false
+
+[[mods]]
+    modId="emomod"
+    version="2.0"
+    displayName="Emotion's Mod"
+    credits="I'd like to thank my mother and father."
+    authors="Author"
+    description='''
+Lets you craft dirt into diamonds. This is a traditional mod that has existed for eons. It is ancient. The holy Notch created it. Jeb rainbowfied it. Dinnerbone made it upside down. Etc.
+    '''
+
+[[dependencies.emomod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[37,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.emomod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.17.1,1.18)"
+    ordering="NONE"
+    side="BOTH"

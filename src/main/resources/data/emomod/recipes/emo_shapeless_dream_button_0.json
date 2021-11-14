@@ -1,0 +1,13 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "emomod:planks_dream"
+    }
+  ],
+  "result": {
+    "item": "emomod:dream_button"
+  }
+}

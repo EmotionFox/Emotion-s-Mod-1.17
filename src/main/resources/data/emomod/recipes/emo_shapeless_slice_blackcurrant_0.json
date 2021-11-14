@@ -1,0 +1,25 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "emomod:pot_blackcurrant"
+    },
+    {
+      "item": "emomod:slice_bread"
+    },
+    {
+      "item": "emomod:slice_bread"
+    },
+    {
+      "item": "emomod:slice_bread"
+    },
+    {
+      "item": "emomod:slice_bread"
+    }
+  ],
+  "result": {
+    "item": "emomod:slice_blackcurrant",
+    "count": 4
+  }
+}

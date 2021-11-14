@@ -1,0 +1,91 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "emomod:harvest_level",
+                  "tool": "axe",
+                  "min": 1,
+                  "type": "lower"
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 0.0,
+                    "max": 2.0,
+                    "type": "minecraft:uniform"
+                  }
+                }
+              ],
+              "name": "minecraft:stick"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "emomod:harvest_level",
+                  "tool": "axe",
+                  "min": 3,
+                  "type": "strictly_higher"
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 4.0,
+                    "max": 8.0,
+                    "type": "minecraft:uniform"
+                  }
+                }
+              ],
+              "name": "minecraft:jungle_planks"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "emomod:harvest_level",
+                  "tool": "axe",
+                  "min": 1,
+                  "type": "strictly_higher"
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 4.0,
+                    "max": 6.0,
+                    "type": "minecraft:uniform"
+                  }
+                }
+              ],
+              "name": "minecraft:jungle_planks"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:jungle_log",
+          "weight": 2
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

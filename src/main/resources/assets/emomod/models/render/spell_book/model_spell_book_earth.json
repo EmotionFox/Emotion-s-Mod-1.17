@@ -1,0 +1,6 @@
+{
+    "parent": "emomod:render/spell_book/model_spell_book",
+    "textures": {
+        "page": "emomod:item/spell_book_earth"
+    }
+}

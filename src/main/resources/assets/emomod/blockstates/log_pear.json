@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":    { "model": "emomod:block/log_pear" },
+        "axis=z":     { "model": "emomod:block/log_pear", "x": 90 },
+        "axis=x":     { "model": "emomod:block/log_pear", "x": 90, "y": 90 }
+    }
+}

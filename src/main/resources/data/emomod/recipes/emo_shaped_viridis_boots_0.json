@@ -1,0 +1,19 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "Y Y",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Y": {
+      "item": "emomod:viridis_cristal"
+    }
+  },
+  "result": {
+    "item": "emomod:viridis_boots"
+  }
+}

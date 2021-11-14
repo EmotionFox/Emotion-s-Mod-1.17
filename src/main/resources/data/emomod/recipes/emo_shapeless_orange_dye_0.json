@@ -1,0 +1,12 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "emomod:flower_gnon"
+    }
+  ],
+  "result": {
+    "item": "minecraft:orange_dye"
+  }
+}

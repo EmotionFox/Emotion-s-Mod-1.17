@@ -1,0 +1,8 @@
+{
+    "variants": 
+    {
+    	"age=0" : {"model": "emomod:block/bush_dry_blackcurrant"},
+        "age=1" : {"model": "emomod:block/bush_simple_blackcurrant"},
+        "age=2" : {"model": "emomod:block/bush_blackcurrant"}
+    }
+}

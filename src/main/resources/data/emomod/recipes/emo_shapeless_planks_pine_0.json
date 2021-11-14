@@ -1,0 +1,14 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "emomod:pine_logs"
+    }
+  ],
+  "result": {
+    "item": "emomod:planks_pine",
+    "count": 4
+  }
+}

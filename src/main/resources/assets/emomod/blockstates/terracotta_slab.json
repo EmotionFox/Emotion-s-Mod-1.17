@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "emomod:block/terracotta_slab" },
+        "type=top": { "model": "emomod:block/terracotta_slab_top" },
+        "type=double": { "model": "block/terracotta" }
+    }
+}

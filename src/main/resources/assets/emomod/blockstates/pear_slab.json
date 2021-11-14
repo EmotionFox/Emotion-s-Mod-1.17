@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "emomod:block/pear_slab" },
+        "type=top": { "model": "emomod:block/pear_slab_top" },
+        "type=double": { "model": "emomod:block/planks_pear" }
+    }
+}

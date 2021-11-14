@@ -1,0 +1,7 @@
+{
+    "parent": "emomod:block/wood_table_ns",
+    "textures": 
+    {
+        "wood": "block/dark_oak_planks"
+    }
+}

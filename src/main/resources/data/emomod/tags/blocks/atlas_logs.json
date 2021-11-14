@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "emomod:log_atlas",
+    "emomod:wood_atlas",
+    "emomod:stripped_atlas_log",
+    "emomod:stripped_atlas_wood"
+  ]
+}

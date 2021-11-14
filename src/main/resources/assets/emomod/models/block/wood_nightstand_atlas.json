@@ -1,0 +1,7 @@
+{
+    "parent": "emomod:block/wood_nightstand",
+    "textures": 
+    {
+        "wood": "emomod:block/planks_atlas"
+    }
+}

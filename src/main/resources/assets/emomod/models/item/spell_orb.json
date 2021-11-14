@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "emomod:item/spell_orb",
+        "layer1": "emomod:item/spell_orb_overlay"
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "emomod:purpura_shard"
+    }
+  },
+  "result": {
+    "item": "emomod:purpura_block"
+  }
+}

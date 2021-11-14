@@ -1,0 +1,9 @@
+{
+    "variants": 
+    {
+        "facing=south": { "model": "emomod:block/box_window_rose" },
+        "facing=north": { "model": "emomod:block/box_window_rose", "y": 180 },
+        "facing=east":  { "model": "emomod:block/box_window_rose", "y": 270 },
+        "facing=west":  { "model": "emomod:block/box_window_rose", "y": 90 }
+    }
+}

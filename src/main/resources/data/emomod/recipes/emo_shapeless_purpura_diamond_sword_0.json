@@ -1,0 +1,32 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "emomod:purpura_sword"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "item": "emomod:purpura_diamond_sword",
+    "nbt":
+    {
+      "Enchantments":
+      [
+        {
+          "id": "minecraft:sharpness",
+          "lvl": 3
+        },
+        {
+          "id": "minecraft:unbreaking",
+          "lvl": 3
+        }
+      ]
+    }
+  }
+}

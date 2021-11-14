@@ -1,0 +1,17 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "emomod:fruit_cherry"
+    }
+  },
+  "result": {
+    "item": "emomod:bag_cherry"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "emomod:log_cherry",
+    "emomod:wood_cherry",
+    "emomod:stripped_cherry_log",
+    "emomod:stripped_cherry_wood"
+  ]
+}

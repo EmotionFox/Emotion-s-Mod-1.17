@@ -1,0 +1,10 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "emomod:fish_bass_raw"
+  },
+  "result": "emomod:fish_bass_cooked",
+  "experience": 0.35,
+  "cookingtime": 100
+}

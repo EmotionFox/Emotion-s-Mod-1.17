@@ -1,0 +1,10 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:stonecutting",
+  "group": "terracotta_slab",
+  "ingredient": {
+    "item": "minecraft:lime_terracotta"
+  },
+  "result": "emomod:lime_terracotta_slab",
+  "count": 2
+}

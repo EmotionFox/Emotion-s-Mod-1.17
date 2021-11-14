@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+  	"emomod:leaves_cherry",
+    "emomod:leaves_pear",
+    "emomod:leaves_orange",
+    "emomod:leaves_atlas",
+    "emomod:leaves_pine",
+    "emomod:leaves_coco",
+    "emomod:leaves_dream"
+  ]
+}

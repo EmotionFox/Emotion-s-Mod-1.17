@@ -1,0 +1,17 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "group": "terracotta_slab",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:purple_terracotta"
+    }
+  },
+  "result": {
+    "item": "emomod:purple_terracotta_slab",
+    "count": 6
+  }
+}

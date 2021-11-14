@@ -1,0 +1,12 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "emomod:flower_nebula"
+    }
+  ],
+  "result": {
+    "item": "minecraft:gray_dye"
+  }
+}

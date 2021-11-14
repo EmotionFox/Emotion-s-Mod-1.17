@@ -1,0 +1,15 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "emomod:horn"
+    }
+  ],
+  "result": {
+    "item": "emomod:knife"
+  }
+}

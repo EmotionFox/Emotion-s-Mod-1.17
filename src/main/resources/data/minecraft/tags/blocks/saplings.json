@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "emomod:sapling_cherry",
+    "emomod:sapling_pear",
+    "emomod:sapling_orange",
+    "emomod:sapling_atlas",
+    "emomod:sapling_pine",
+    "emomod:sapling_coco",
+    "emomod:sapling_dream"
+  ]
+}

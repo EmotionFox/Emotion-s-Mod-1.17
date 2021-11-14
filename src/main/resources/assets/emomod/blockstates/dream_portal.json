@@ -1,0 +1,7 @@
+{
+    "variants": 
+    {
+        "axis=z": { "model": "emomod:block/dream_portal_ew" },
+        "axis=x": { "model": "emomod:block/dream_portal_ns" }
+    }
+}

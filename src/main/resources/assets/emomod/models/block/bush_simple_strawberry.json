@@ -1,0 +1,8 @@
+{
+    "parent": "emomod:block/bush",
+    "textures": 
+    {
+        "type": "emomod:block/bush_simple_strawberry",
+        "base": "emomod:block/bush_base_strawberry"
+    }
+}

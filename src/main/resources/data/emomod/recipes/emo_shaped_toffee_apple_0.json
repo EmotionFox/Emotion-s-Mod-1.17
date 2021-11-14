@@ -1,0 +1,23 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "Y",
+    "Z"
+  ],
+  "key": {
+    "X": {
+      "item": "emomod:toffee_cube"
+    },
+    "Y": {
+      "item": "minecraft:apple"
+    },
+    "Z": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "emomod:toffee_apple"
+  }
+}

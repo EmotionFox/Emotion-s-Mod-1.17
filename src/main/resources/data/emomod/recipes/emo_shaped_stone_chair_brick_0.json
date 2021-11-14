@@ -1,0 +1,17 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "group": "stone_chair",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:bricks"
+    }
+  },
+  "result": {
+    "item": "emomod:stone_chair_brick"
+  }
+}

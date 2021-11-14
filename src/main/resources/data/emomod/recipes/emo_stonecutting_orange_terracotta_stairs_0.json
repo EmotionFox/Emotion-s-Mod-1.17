@@ -1,0 +1,10 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:stonecutting",
+  "group": "terracotta_stairs",
+  "ingredient": {
+    "item": "minecraft:orange_terracotta"
+  },
+  "result": "emomod:orange_terracotta_stairs",
+  "count": 1
+}

@@ -1,0 +1,17 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "Y Y",
+    "YYY"
+  ],
+  "key": {
+    "Y": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "emomod:bowl_glass",
+    "count": 4
+  }
+}

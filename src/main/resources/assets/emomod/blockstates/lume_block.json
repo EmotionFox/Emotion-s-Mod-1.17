@@ -1,0 +1,6 @@
+{ 
+    "variants": 
+    { 
+        "": { "model": "emomod:block/lume_block" } 
+    }
+}

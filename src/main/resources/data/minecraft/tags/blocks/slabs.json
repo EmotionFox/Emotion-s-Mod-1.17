@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "emomod:brown_terracotta_slab",
+    "emomod:cyan_terracotta_slab",
+    "emomod:gray_terracotta_slab",
+    "emomod:green_terracotta_slab",
+    "emomod:light_blue_terracotta_slab",
+    "emomod:light_gray_terracotta_slab",
+    "emomod:lime_terracotta_slab",
+    "emomod:magenta_terracotta_slab",
+    "emomod:orange_terracotta_slab",
+    "emomod:pink_terracotta_slab",
+    "emomod:purple_terracotta_slab",
+    "emomod:red_terracotta_slab",
+    "emomod:terracotta_slab",
+    "emomod:white_terracotta_slab",
+    "emomod:yellow_terracotta_slab",
+    "emomod:blue_terracotta_slab",
+    "emomod:black_terracotta_slab"
+  ]
+}

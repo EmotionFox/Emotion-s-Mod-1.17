@@ -1,0 +1,13 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "emomod:lume_block"
+    }
+  ],
+  "result": {
+    "item": "emomod:lume_stone",
+    "count": 9
+  }
+}

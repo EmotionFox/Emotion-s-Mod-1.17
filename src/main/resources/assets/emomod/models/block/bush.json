@@ -1,0 +1,52 @@
+{
+    "parent": "block/block",
+    "ambientocclusion": false,
+    "textures": 
+    {
+        "particle": "#type"
+    },
+    "elements": 
+    [
+        {
+            "name": "Left",
+            "from": [ -3.0, 0.0, 8.0 ], 
+            "to": [ 19.0, 16.0, 8.0 ], 
+            "rotation": { "origin": [ 8.0, 8.0, 8.0 ], "axis": "y", "angle": 45.0 },
+            "faces": {
+                "north": { "texture": "#base", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "east": { "texture": "#-1", "uv": [ 0.0, 0.0, 0.0, 16.0 ] },
+                "south": { "texture": "#base", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "west": { "texture": "#-1", "uv": [ 0.0, 0.0, 0.0, 16.0 ] },
+                "up": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.0 ] },
+                "down": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.0 ] }
+            }
+        },
+        {
+            "name": "Right",
+            "from": [ -3.0, 0.0, 8.0 ], 
+            "to": [ 19.0, 16.0, 8.0 ], 
+            "rotation": { "origin": [ 8.0, 8.0, 8.0 ], "axis": "y", "angle": -45.0 },
+            "faces": {
+                "north": { "texture": "#base", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "east": { "texture": "#-1", "uv": [ 0.0, 0.0, 0.0, 16.0 ] },
+                "south": { "texture": "#base", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "west": { "texture": "#-1", "uv": [ 0.0, 0.0, 0.0, 16.0 ] },
+                "up": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.0 ] },
+                "down": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.0 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 0.0, 0.0, 0.0 ], 
+            "to": [ 16.0, 16.0, 16.0 ], 
+            "faces": {
+                "north": { "texture": "#type", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "east": { "texture": "#type", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "south": { "texture": "#type", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "west": { "texture": "#type", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "up": { "texture": "#type", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "down": { "texture": "#type", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
+            }
+        }
+    ]
+}

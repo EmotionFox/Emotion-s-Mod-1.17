@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "powered=false": { "model": "emomod:block/cherry_pressure_plate" },
+        "powered=true": { "model": "emomod:block/cherry_pressure_plate_down" }
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "YZY",
+    "XSX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Y": {
+      "tag": "minecraft:planks"
+    },
+    "Z": {
+      "item": "minecraft:crafting_table"
+    },
+    "S": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "emomod:crafter"
+  }
+}

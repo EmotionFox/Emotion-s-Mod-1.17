@@ -1,0 +1,9 @@
+{
+    "variants": 
+    { 
+        "facing=south": { "model": "emomod:block/statue_creeper" },
+        "facing=north": { "model": "emomod:block/statue_creeper", "y": 180 },
+        "facing=east":  { "model": "emomod:block/statue_creeper", "y": 270 },
+        "facing=west":  { "model": "emomod:block/statue_creeper", "y": 90 }
+    }
+}

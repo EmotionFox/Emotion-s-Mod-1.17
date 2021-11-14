@@ -1,0 +1,9 @@
+{
+	"variants": 
+	{
+		"table=normal" : {"model": "emomod:block/stone_table_mossy_cobblestone"},
+		"table=ns" : {"model": "emomod:block/stone_table_mossy_cobblestone_ns"},
+		"table=ew" : {"model": "emomod:block/stone_table_mossy_cobblestone_ew"},
+		"table=full" : {"model": "emomod:block/stone_table_mossy_cobblestone_full"}
+	}
+}

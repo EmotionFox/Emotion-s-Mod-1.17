@@ -1,0 +1,10 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "emomod:purpura_ore"
+  },
+  "result": "emomod:purpura_shard",
+  "experience": 1.0,
+  "cookingtime": 100
+}

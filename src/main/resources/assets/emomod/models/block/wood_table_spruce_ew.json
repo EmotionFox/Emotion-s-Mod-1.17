@@ -1,0 +1,7 @@
+{
+    "parent": "emomod:block/wood_table_ew",
+    "textures": 
+    {
+        "wood": "block/spruce_planks"
+    }
+}

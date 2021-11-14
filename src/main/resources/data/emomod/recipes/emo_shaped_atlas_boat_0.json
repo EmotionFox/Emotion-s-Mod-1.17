@@ -1,0 +1,16 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "emomod:planks_atlas"
+    }
+  },
+  "result": {
+    "item": "emomod:atlas_boat"
+  }
+}

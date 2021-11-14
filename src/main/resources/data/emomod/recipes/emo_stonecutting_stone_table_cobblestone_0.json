@@ -1,0 +1,10 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:stonecutting",
+  "group": "stone_table",
+  "ingredient": {
+    "item": "minecraft:cobblestone"
+  },
+  "result": "emomod:stone_table_cobblestone",
+  "count": 2
+}

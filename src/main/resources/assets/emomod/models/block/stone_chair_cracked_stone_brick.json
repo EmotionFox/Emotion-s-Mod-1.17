@@ -1,0 +1,7 @@
+{
+    "parent": "emomod:block/stone_chair",
+    "textures": 
+    {
+        "stone": "block/cracked_stone_bricks"
+    }
+}

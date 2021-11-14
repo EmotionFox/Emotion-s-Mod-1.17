@@ -1,0 +1,6 @@
+{
+    "parent": "block/button_inventory",
+    "textures": {
+        "texture": "emomod:block/planks_pear"
+    }
+}

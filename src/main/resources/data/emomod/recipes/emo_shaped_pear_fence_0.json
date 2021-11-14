@@ -1,0 +1,21 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "emomod:planks_pear"
+    },
+    "Y": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "emomod:pear_fence",
+    "count": 3
+  }
+}

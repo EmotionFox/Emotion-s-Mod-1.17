@@ -1,0 +1,6 @@
+{ 
+    "variants": 
+    {
+        "": { "model": "emomod:block/fossil_ore" } 
+    }
+}

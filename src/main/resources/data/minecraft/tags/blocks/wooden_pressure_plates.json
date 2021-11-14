@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "emomod:cherry_pressure_plate",
+    "emomod:pear_pressure_plate",
+    "emomod:orange_pressure_plate",
+    "emomod:atlas_pressure_plate",
+    "emomod:pine_pressure_plate",
+    "emomod:coco_pressure_plate",
+    "emomod:dream_pressure_plate"
+  ]
+}

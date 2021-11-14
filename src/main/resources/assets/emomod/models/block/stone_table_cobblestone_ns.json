@@ -1,0 +1,7 @@
+{
+    "parent": "emomod:block/stone_table_ns",
+    "textures": 
+    {
+        "stone": "block/cobblestone"
+    }
+}

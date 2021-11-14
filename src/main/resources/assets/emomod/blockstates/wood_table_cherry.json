@@ -1,0 +1,9 @@
+{
+	"variants": 
+	{
+		"table=normal" : {"model": "emomod:block/wood_table_cherry"},
+		"table=ns" : {"model": "emomod:block/wood_table_cherry_ns"},
+		"table=ew" : {"model": "emomod:block/wood_table_cherry_ew"},
+		"table=full" : {"model": "emomod:block/wood_table_cherry_full"}
+	}
+}

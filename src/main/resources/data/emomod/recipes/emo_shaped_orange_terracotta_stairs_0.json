@@ -1,0 +1,19 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "group": "terracotta_stairs",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:orange_terracotta"
+    }
+  },
+  "result": {
+    "item": "emomod:orange_terracotta_stairs",
+    "count": 4
+  }
+}

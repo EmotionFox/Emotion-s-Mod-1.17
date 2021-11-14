@@ -1,0 +1,10 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "emomod:fish_whiting_raw"
+  },
+  "result": "emomod:fish_whiting_cooked",
+  "experience": 0.35,
+  "cookingtime": 100
+}

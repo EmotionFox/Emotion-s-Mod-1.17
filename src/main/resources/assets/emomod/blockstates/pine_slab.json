@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "emomod:block/pine_slab" },
+        "type=top": { "model": "emomod:block/pine_slab_top" },
+        "type=double": { "model": "emomod:block/planks_pine" }
+    }
+}

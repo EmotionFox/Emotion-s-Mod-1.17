@@ -1,0 +1,21 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_table",
+  "pattern": [
+    "XXX",
+    " X ",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:oak_planks"
+    },
+    "Y": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "emomod:wood_table_oak"
+  }
+}

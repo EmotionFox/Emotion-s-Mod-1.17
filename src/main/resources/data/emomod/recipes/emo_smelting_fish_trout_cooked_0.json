@@ -1,0 +1,10 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "emomod:fish_trout_raw"
+  },
+  "result": "emomod:fish_trout_cooked",
+  "experience": 0.35,
+  "cookingtime": 200
+}

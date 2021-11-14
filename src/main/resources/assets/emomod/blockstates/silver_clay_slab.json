@@ -1,0 +1,7 @@
+{
+    "variants": 
+    {
+        "half=bottom": { "model": "emomod:block/half_clay_slab_silver" },
+        "half=top": { "model": "emomod:block/upper_clay_slab_silver" }
+    }
+}

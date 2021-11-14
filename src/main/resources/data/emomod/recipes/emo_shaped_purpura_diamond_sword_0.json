@@ -1,0 +1,37 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XZ",
+    "XZ",
+    "Y "
+  ],
+  "key": {
+    "X": {
+      "item": "emomod:purpura_shard"
+    },
+    "Y": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Z": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "emomod:purpura_diamond_sword",
+    "nbt":
+    {
+      "Enchantments":
+      [
+        {
+          "id": "minecraft:sharpness",
+          "lvl": 3
+        },
+        {
+          "id": "minecraft:unbreaking",
+          "lvl": 3
+        }
+      ]
+    }
+  }
+}

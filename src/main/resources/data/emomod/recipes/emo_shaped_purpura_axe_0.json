@@ -1,0 +1,20 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XY",
+    " Y"
+  ],
+  "key": {
+    "X": {
+      "item": "emomod:purpura_shard"
+    },
+    "Y": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "emomod:purpura_axe"
+  }
+}

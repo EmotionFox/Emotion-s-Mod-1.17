@@ -1,0 +1,10 @@
+{
+  "_comment": "Edited For Emotion's Mod",
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "emomod:wildboar_raw"
+  },
+  "result": "emomod:wildboar_cooked",
+  "experience": 0.6,
+  "cookingtime": 100
+}

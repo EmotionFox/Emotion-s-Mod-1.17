@@ -1,0 +1,9 @@
+{
+	"variants": 
+	{
+		"table=normal" : {"model": "emomod:block/stone_table_stone_brick"},
+		"table=ns" : {"model": "emomod:block/stone_table_stone_brick_ns"},
+		"table=ew" : {"model": "emomod:block/stone_table_stone_brick_ew"},
+		"table=full" : {"model": "emomod:block/stone_table_stone_brick_full"}
+	}
+}
