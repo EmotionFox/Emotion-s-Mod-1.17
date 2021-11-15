@@ -20,6 +20,7 @@ public class OrchardDecorator extends FeatureDecorator<NoneDecoratorConfiguratio
 	@Override
 	public Stream<BlockPos> getPositions(DecorationContext context, Random rand, NoneDecoratorConfiguration config, BlockPos pos)
 	{
+		// Should Always Return 0, 0, 0 Of The Chunk;
 		return Stream.of(pos);
 	}
 }
