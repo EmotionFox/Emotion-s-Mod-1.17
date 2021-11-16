@@ -55,6 +55,11 @@ public class ClientProxy implements IProxy
 	@OnlyIn(Dist.CLIENT)
 	public void init()
 	{
+		BiomeColors.FOLIAGE_COLOR_RESOLVER = (biome, x, z) ->
+		{
+			return biome.getFoliageColor();
+		};
+
 		MinecraftForge.EVENT_BUS.register(new EmotionGUIEvent());
 
 //		ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySign.class, new TileEntitySignRenderer());
@@ -98,8 +103,9 @@ public class ClientProxy implements IProxy
 	{
 		BlockEntityRenderers.register(BlockEntityRegistry.SIGN.get(), SignRenderer::new);
 		BlockEntityRenderers.register(BlockEntityRegistry.POT.get(), TileEntityPotRenderer::new);
-		
-		event.enqueueWork(() -> {
+
+		event.enqueueWork(() ->
+		{
 			Sheets.addWoodType(BlockRegistry.CHERRY_WOOD_TYPE);
 			Sheets.addWoodType(BlockRegistry.PEAR_WOOD_TYPE);
 			Sheets.addWoodType(BlockRegistry.ORANGE_WOOD_TYPE);
@@ -109,7 +115,7 @@ public class ClientProxy implements IProxy
 			Sheets.addWoodType(BlockRegistry.DREAM_WOOD_TYPE);
 		});
 	}
-	
+
 	@SubscribeEvent
 	public static void layerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event)
 	{
@@ -121,7 +127,7 @@ public class ClientProxy implements IProxy
 		event.registerLayerDefinition(EmoModelLayers.MOUSE, ModelMouse::createBodyLayer);
 		event.registerLayerDefinition(EmoModelLayers.MUSHROOM, ModelMushroom::createBodyLayer);
 	}
-	
+
 	@SubscribeEvent
 	public static void onRegisterRenderer(EntityRenderersEvent.RegisterRenderers event)
 	{
