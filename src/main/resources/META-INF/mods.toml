@@ -1,20 +1,24 @@
 modLoader="javafml"
-# Forge for 1.17.1 is version 37
 loaderVersion="[37,)"
 license="All rights reserved"
-showAsResourcePack=false
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
 
 [[mods]]
     modId="emomod"
-    version="2.0"
+    version="${file.jarVersion}"
     displayName="Emotion's Mod"
-    credits="I'd like to thank my mother and father."
-    authors="Author"
+    #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+    #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+    logoFile="ModEmotion.png" #optional
+    credits="Thanks MinecraftForgeFrance and MinecraftForge forum for the help" #optional
+    authors="EmotionFox" #optional
     description='''
-Lets you craft dirt into diamonds. This is a traditional mod that has existed for eons. It is ancient. The holy Notch created it. Jeb rainbowfied it. Dinnerbone made it upside down. Etc.
+Emotion's Mod is a huge mod with many additions of gameplay features, biomes, blocks, items, features etc.. The main focus was to stay "vanillia proof" in the textures and implementations, to add variation and extends the lifetime of the soft.
+
+He was created by default to be played with my girlfriend EmotionKitten and friend EmotionBest, but since you can have it I've certainly put it online so, ENJOY :)
     '''
 
-[[dependencies.emomod]]
+[[dependencies.emomod]] #optional
     modId="forge"
     mandatory=true
     versionRange="[37,)"

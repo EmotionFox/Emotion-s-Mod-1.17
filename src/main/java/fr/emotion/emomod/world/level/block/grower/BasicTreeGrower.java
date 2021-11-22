@@ -7,21 +7,21 @@ import net.minecraft.world.level.block.grower.AbstractTreeGrower;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 
-public class OrchardTreeGrower extends AbstractTreeGrower
+public class BasicTreeGrower extends AbstractTreeGrower
 {
+	protected ConfiguredFeature<TreeConfiguration, ?> feature;
+
+	public BasicTreeGrower(ConfiguredFeature<TreeConfiguration, ?> feature)
+	{
+		this.feature = feature;
+	}
+
 	@Override
 	protected ConfiguredFeature<TreeConfiguration, ?> getConfiguredFeature(Random rand, boolean bee)
 	{
-		int choice = rand.nextInt(3);
-
-		switch (choice)
-		{
-		case 0:
-			return FeatureRegistry.CF_CHERRY_TREE;
-		case 1:
-			return FeatureRegistry.CF_ORANGE_TREE;
-		default:
-			return FeatureRegistry.CF_PEAR_TREE;
-		}
+		if (feature == null)
+			return FeatureRegistry.CF_CHERRY_TREE; // Why Not
+		else
+			return this.feature;
 	}
 }

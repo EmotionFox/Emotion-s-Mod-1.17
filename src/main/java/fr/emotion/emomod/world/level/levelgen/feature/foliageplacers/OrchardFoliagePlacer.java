@@ -20,20 +20,14 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerTy
 
 public class OrchardFoliagePlacer extends FoliagePlacer
 {
-	public static final Codec<OrchardFoliagePlacer> CODEC = RecordCodecBuilder.create((builder) ->
+	public static final Codec<OrchardFoliagePlacer> CODEC = RecordCodecBuilder.create((foliagePlacer) ->
 	{
-		return foliagePlacerParts(builder).and(IntProvider.codec(0, 16).fieldOf("trunk_height").forGetter((getter) ->
-		{
-			return getter.height;
-		})).apply(builder, OrchardFoliagePlacer::new);
+		return foliagePlacerParts(foliagePlacer).apply(foliagePlacer, OrchardFoliagePlacer::new);
 	});
 
-	private final IntProvider height;
-
-	public OrchardFoliagePlacer(IntProvider radius, IntProvider offset, IntProvider height)
+	public OrchardFoliagePlacer(IntProvider radius, IntProvider offset)
 	{
 		super(radius, offset);
-		this.height = height;
 	}
 
 	@Override
@@ -43,10 +37,9 @@ public class OrchardFoliagePlacer extends FoliagePlacer
 	}
 
 	@Override
-	protected void createFoliage(LevelSimulatedReader reader, BiConsumer<BlockPos, BlockState> consumer, Random rand, TreeConfiguration config, int p_161426_, FoliageAttachment attachment, int p_161428_, int p_161429_, int p_161430_)
+	protected void createFoliage(LevelSimulatedReader reader, BiConsumer<BlockPos, BlockState> consumer, Random rand, TreeConfiguration config, int p_161426_, FoliageAttachment attachment, int foliageHeight, int radius, int offset)
 	{
-		MutableBlockPos pos = new MutableBlockPos();
-		pos.set(attachment.pos());
+		MutableBlockPos pos = attachment.pos().mutable();
 
 		for (int a = 1; a <= 3; a++)
 		{
@@ -96,26 +89,18 @@ public class OrchardFoliagePlacer extends FoliagePlacer
 			}
 		}
 
-		for (int x = -1; x <= 1; x++)
-		{
-			for (int z = -1; z <= 1; z++)
-			{
-				if (TreeFeature.validTreePos(reader, pos.offset(x, -3, z)))
-					consumer.accept(pos.offset(x, -3, z), Blocks.AIR.defaultBlockState());
-			}
-		}
-
 		for (int i = -3; i <= 3; i++)
 		{
 			tryPlaceLeaf(reader, consumer, rand, config, pos.offset(i, 0, 0));
 			tryPlaceLeaf(reader, consumer, rand, config, pos.offset(0, 0, i));
+		}
 
-			if (i != -3 && i != 3)
+		for (int x = -1; x <= 1; x++)
+		{
+			for (int z = -1; z <= 1; z++)
 			{
-				if (TreeFeature.validTreePos(reader, pos.offset(i, -2, 0)))
-					consumer.accept(pos, config.trunkProvider.getState(rand, pos.offset(i, -2, 0)).setValue(net.minecraft.world.level.block.RotatedPillarBlock.AXIS, net.minecraft.core.Direction.Axis.X));
-				if (TreeFeature.validTreePos(reader, pos.offset(0, -2, i)))
-					consumer.accept(pos, config.trunkProvider.getState(rand, pos.offset(0, -2, i)).setValue(net.minecraft.world.level.block.RotatedPillarBlock.AXIS, net.minecraft.core.Direction.Axis.X));
+				if (TreeFeature.isAirOrLeaves(reader, pos.offset(x, -3, z)))
+					consumer.accept(pos.offset(x, -3, z), Blocks.AIR.defaultBlockState());
 			}
 		}
 	}

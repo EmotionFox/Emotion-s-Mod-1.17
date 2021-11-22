@@ -14,7 +14,7 @@ import fr.emotion.emomod.blocks.basic.BasicOre;
 import fr.emotion.emomod.blocks.basic.BasicStandingSign;
 import fr.emotion.emomod.blocks.basic.BasicViscous;
 import fr.emotion.emomod.blocks.basic.BasicWallSign;
-import fr.emotion.emomod.world.gen.feature.EmoTree;
+import fr.emotion.emomod.world.level.block.grower.BasicTreeGrower;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -219,11 +219,11 @@ public class BlockRegistry
 	// Saplings
 
 	public static final RegistryObject<Block> SAPLING_CHERRY = BLOCKS.register("sapling_cherry",
-			() -> new SaplingBlock(new EmoTree(LOG_CHERRY.get().defaultBlockState(), LEAVES_CHERRY.get().defaultBlockState()), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
+			() -> new SaplingBlock(new BasicTreeGrower(FeatureRegistry.CF_CHERRY_TREE), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
 	public static final RegistryObject<Block> SAPLING_PEAR = BLOCKS.register("sapling_pear",
-			() -> new SaplingBlock(new EmoTree(LOG_PEAR.get().defaultBlockState(), LEAVES_PEAR.get().defaultBlockState()), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
+			() -> new SaplingBlock(new BasicTreeGrower(FeatureRegistry.CF_PEAR_TREE), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
 	public static final RegistryObject<Block> SAPLING_ORANGE = BLOCKS.register("sapling_orange",
-			() -> new SaplingBlock(new EmoTree(LOG_ORANGE.get().defaultBlockState(), LEAVES_ORANGE.get().defaultBlockState()), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
+			() -> new SaplingBlock(new BasicTreeGrower(FeatureRegistry.CF_ORANGE_TREE), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
 //	public static final RegistryObject<Block> SAPLING_ATLAS = BLOCKS.register("sapling_atlas", () -> new SaplingBlock(new EmoAtlasTree(false), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
 //	public static final RegistryObject<Block> SAPLING_PINE = BLOCKS.register("sapling_pine", () -> new SaplingBlock(new EmoPineTree(), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
 	public static final RegistryObject<Block> SAPLING_COCO = BLOCKS.register("sapling_coco", () -> new Block(Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0f).sound(SoundType.GRASS)));

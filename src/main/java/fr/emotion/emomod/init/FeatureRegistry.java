@@ -19,7 +19,6 @@ import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.Features;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.ConstantInt;
-import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.block.HugeMushroomBlock;
 import net.minecraft.world.level.levelgen.GenerationStep.Decoration;
@@ -92,18 +91,18 @@ public class FeatureRegistry
 
 	public static final ConfiguredFeature<TreeConfiguration, ?> CF_CHERRY_TREE = register("cherry_tree",
 			Feature.TREE.configured((new TreeConfiguration.TreeConfigurationBuilder(new SimpleStateProvider(BlockRegistry.LOG_CHERRY.get().defaultBlockState()), new StraightTrunkPlacer(5, 2, 0),
-					new SimpleStateProvider(BlockRegistry.LEAVES_CHERRY.get().defaultBlockState()), new SimpleStateProvider(BlockRegistry.SAPLING_CHERRY.get().defaultBlockState()),
-					new OrchardFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), UniformInt.of(3, 7)), new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4)))).ignoreVines().build()));
+					new SimpleStateProvider(BlockRegistry.LEAVES_CHERRY.get().defaultBlockState()), new SimpleStateProvider(BlockRegistry.SAPLING_CHERRY.get().defaultBlockState()), new OrchardFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4)),
+					new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4)))).ignoreVines().build()));
 
 	public static final ConfiguredFeature<TreeConfiguration, ?> CF_PEAR_TREE = register("pear_tree",
 			Feature.TREE.configured((new TreeConfiguration.TreeConfigurationBuilder(new SimpleStateProvider(BlockRegistry.LOG_PEAR.get().defaultBlockState()), new StraightTrunkPlacer(5, 2, 0),
-					new SimpleStateProvider(BlockRegistry.LEAVES_PEAR.get().defaultBlockState()), new SimpleStateProvider(BlockRegistry.SAPLING_PEAR.get().defaultBlockState()),
-					new OrchardFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), UniformInt.of(3, 7)), new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4)))).ignoreVines().build()));
+					new SimpleStateProvider(BlockRegistry.LEAVES_PEAR.get().defaultBlockState()), new SimpleStateProvider(BlockRegistry.SAPLING_PEAR.get().defaultBlockState()), new OrchardFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4)),
+					new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4)))).ignoreVines().build()));
 
 	public static final ConfiguredFeature<TreeConfiguration, ?> CF_ORANGE_TREE = register("orange_tree",
 			Feature.TREE.configured((new TreeConfiguration.TreeConfigurationBuilder(new SimpleStateProvider(BlockRegistry.LOG_ORANGE.get().defaultBlockState()), new StraightTrunkPlacer(5, 2, 0),
-					new SimpleStateProvider(BlockRegistry.LEAVES_ORANGE.get().defaultBlockState()), new SimpleStateProvider(BlockRegistry.SAPLING_ORANGE.get().defaultBlockState()),
-					new OrchardFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), UniformInt.of(3, 7)), new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4)))).ignoreVines().build()));
+					new SimpleStateProvider(BlockRegistry.LEAVES_ORANGE.get().defaultBlockState()), new SimpleStateProvider(BlockRegistry.SAPLING_ORANGE.get().defaultBlockState()), new OrchardFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4)),
+					new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4)))).ignoreVines().build()));
 
 	public static final ConfiguredFeature<BlockStateConfiguration, ?> CF_PINE_LAYING_TREE = register("pine_laying_tree", LAYING_TREE.get().configured(new BlockStateConfiguration(BlockRegistry.LOG_PINE.get().defaultBlockState())));
 

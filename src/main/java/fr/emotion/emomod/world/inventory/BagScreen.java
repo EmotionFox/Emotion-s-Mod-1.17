@@ -1,9 +1,13 @@
 package fr.emotion.emomod.world.inventory;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+
 import fr.emotion.emomod.inventory.container.BagContainer;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.screens.inventory.HopperScreen;
 import net.minecraft.world.inventory.RecipeBookMenu;
 
-public class BagScreen extends RecipeBookMenu<BagContainer>
+public class BagScreen extends AbstractContainerScreen<BagContainer>
 {
 	private static final ResourceLocation BAG_GUI_SCREEN = new ResourceLocation(MainRegistry.MOD_ID, "textures/gui/bag.png");
 
@@ -13,6 +17,7 @@ public class BagScreen extends RecipeBookMenu<BagContainer>
 		this.xSize = 176;
 		this.ySize = 127;
 	}
+	
 
 	@Override
 	public void render(int p_render_1_, int p_render_2_, float p_render_3_)
@@ -38,5 +43,13 @@ public class BagScreen extends RecipeBookMenu<BagContainer>
 		this.minecraft.getTextureManager().bindTexture(BAG_GUI_SCREEN);
 
 		this.blit(xPos, yPos, 0, 0, this.xSize, this.ySize);
+	}
+
+
+	@Override
+	protected void renderBg(PoseStack p_97787_, float p_97788_, int p_97789_, int p_97790_)
+	{
+		// TODO Auto-generated method stub
+		
 	}
 }
