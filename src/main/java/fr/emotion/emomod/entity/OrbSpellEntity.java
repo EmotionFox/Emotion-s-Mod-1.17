@@ -85,7 +85,7 @@ public class OrbSpellEntity extends ThrowableItemProjectile
 		{
 			FluidState fluidState = this.level.getFluidState(this.blockPosition());
 
-			if (this.spell.getName() == "water")
+			if (this.spell.name() == "water")
 			{
 				if (fluidState.is(FluidTags.LAVA))
 				{
@@ -93,7 +93,7 @@ public class OrbSpellEntity extends ThrowableItemProjectile
 					this.level.levelEvent(1501, this.blockPosition(), 0);
 					this.findLava(this.blockPosition(), this.blockPosition());
 				}
-			} else if (this.spell.getName() == "fire")
+			} else if (this.spell.name() == "fire")
 			{
 				if (fluidState.is(FluidTags.WATER))
 				{
@@ -114,7 +114,7 @@ public class OrbSpellEntity extends ThrowableItemProjectile
 		ServerPlayer player = (ServerPlayer) this.thrower;
 		BlockState state = result.getType() == HitResult.Type.BLOCK ? player.level.getBlockState(((BlockHitResult) result).getBlockPos()) : null;
 
-		switch (this.spell.getName())
+		switch (this.spell.name())
 		{
 		default:
 		case "earth":

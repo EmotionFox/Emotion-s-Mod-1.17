@@ -15,10 +15,12 @@ import fr.emotion.emomod.blocks.basic.BasicStandingSign;
 import fr.emotion.emomod.blocks.basic.BasicViscous;
 import fr.emotion.emomod.blocks.basic.BasicWallSign;
 import fr.emotion.emomod.world.level.block.grower.BasicTreeGrower;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CakeBlock;
@@ -28,6 +30,7 @@ import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.HugeMushroomBlock;
 import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.MushroomBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SaplingBlock;
@@ -38,9 +41,11 @@ import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WoodButtonBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -137,19 +142,23 @@ public class BlockRegistry
 	public static final RegistryObject<Block> POTTED_NARCOTA = BLOCKS.register("potted_narcota",
 			() -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT.delegate.get(), () -> FLOWER_NARCOTA.get(), Properties.of(Material.DECORATION).strength(0.0F)));
 
-//	public static final RegistryObject<Block> MUSHROOM_BLUE = BLOCKS.register("mushroom_blue",
-//			() -> new MushroomBlock(Properties.of(Material.PLANT, MaterialColor.COLOR_LIGHT_BLUE).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS).lightValue(1)));
-//	public static final RegistryObject<Block> MUSHROOM_GREEN = BLOCKS.register("mushroom_green",
-//			() -> new MushroomBlock(Properties.of(Material.PLANT, MaterialColor.COLOR_LIGHT_GREEN).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS).lightLevel((value) ->
-//			{
-//				return 1;
-//			}).hasPostProcess((state, getter, pos) ->
-//			{
-//				return (boolean) true;
-//			}), () ->
-//			{
-//				return FeatureRegistry.HUGE_BLUE_MUSHROOM;
-//			}));
+	public static final RegistryObject<Block> MUSHROOM_BLUE = BLOCKS.register("mushroom_blue",
+			() -> new MushroomBlock(Properties.of(Material.PLANT, MaterialColor.COLOR_LIGHT_BLUE).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS).lightLevel((level) ->
+			{
+				return 1;
+			}).hasPostProcess(BlockRegistry::always), () ->
+			{
+				return FeatureRegistry.CF_HUGE_BLUE_MUSHROOM.get();
+			}));
+
+	public static final RegistryObject<Block> MUSHROOM_GREEN = BLOCKS.register("mushroom_green",
+			() -> new MushroomBlock(Properties.of(Material.PLANT, MaterialColor.COLOR_LIGHT_GREEN).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS).lightLevel((level) ->
+			{
+				return 1;
+			}), () ->
+			{
+				return FeatureRegistry.CF_HUGE_BLUE_MUSHROOM.get();
+			}));
 
 	// Leaves
 
@@ -219,13 +228,15 @@ public class BlockRegistry
 	// Saplings
 
 	public static final RegistryObject<Block> SAPLING_CHERRY = BLOCKS.register("sapling_cherry",
-			() -> new SaplingBlock(new BasicTreeGrower(FeatureRegistry.CF_CHERRY_TREE), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
+			() -> new SaplingBlock(new BasicTreeGrower(FeatureRegistry.CF_CHERRY_TREE.get()), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
 	public static final RegistryObject<Block> SAPLING_PEAR = BLOCKS.register("sapling_pear",
-			() -> new SaplingBlock(new BasicTreeGrower(FeatureRegistry.CF_PEAR_TREE), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
+			() -> new SaplingBlock(new BasicTreeGrower(FeatureRegistry.CF_PEAR_TREE.get()), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
 	public static final RegistryObject<Block> SAPLING_ORANGE = BLOCKS.register("sapling_orange",
-			() -> new SaplingBlock(new BasicTreeGrower(FeatureRegistry.CF_ORANGE_TREE), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
-//	public static final RegistryObject<Block> SAPLING_ATLAS = BLOCKS.register("sapling_atlas", () -> new SaplingBlock(new EmoAtlasTree(false), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
-//	public static final RegistryObject<Block> SAPLING_PINE = BLOCKS.register("sapling_pine", () -> new SaplingBlock(new EmoPineTree(), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
+			() -> new SaplingBlock(new BasicTreeGrower(FeatureRegistry.CF_ORANGE_TREE.get()), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
+	public static final RegistryObject<Block> SAPLING_ATLAS = BLOCKS.register("sapling_atlas",
+			() -> new SaplingBlock(new BasicTreeGrower(FeatureRegistry.CF_ATLAS_TREE.get()), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
+	public static final RegistryObject<Block> SAPLING_PINE = BLOCKS.register("sapling_pine",
+			() -> new SaplingBlock(new BasicTreeGrower(FeatureRegistry.CF_ATLAS_TREE.get()), Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS)));
 	public static final RegistryObject<Block> SAPLING_COCO = BLOCKS.register("sapling_coco", () -> new Block(Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0f).sound(SoundType.GRASS)));
 	public static final RegistryObject<Block> SAPLING_DREAM = BLOCKS.register("sapling_dream", () -> new Block(Properties.of(Material.PLANT).noCollission().randomTicks().strength(0.0f).sound(SoundType.GRASS)));
 
@@ -235,10 +246,10 @@ public class BlockRegistry
 			() -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT.delegate.get(), () -> SAPLING_PEAR.get().delegate.get(), Properties.of(Material.DECORATION).strength(0.0F)));
 	public static final RegistryObject<Block> POTTED_SAPLING_ORANGE = BLOCKS.register("potted_sapling_orange",
 			() -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT.delegate.get(), () -> SAPLING_ORANGE.get().delegate.get(), Properties.of(Material.DECORATION).strength(0.0F)));
-//	public static final RegistryObject<Block> POTTED_SAPLING_ATLAS = BLOCKS.register("potted_sapling_atlas",
-//			() -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT.delegate.get(), () -> SAPLING_ATLAS.get().delegate.get(), Properties.of(Material.DECORATION).strength(0.0F)));
-//	public static final RegistryObject<Block> POTTED_SAPLING_PINE = BLOCKS.register("potted_sapling_pine",
-//			() -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT.delegate.get(), () -> SAPLING_PINE.get().delegate.get(), Properties.of(Material.DECORATION).strength(0.0F)));
+	public static final RegistryObject<Block> POTTED_SAPLING_ATLAS = BLOCKS.register("potted_sapling_atlas",
+			() -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT.delegate.get(), () -> SAPLING_ATLAS.get().delegate.get(), Properties.of(Material.DECORATION).strength(0.0F)));
+	public static final RegistryObject<Block> POTTED_SAPLING_PINE = BLOCKS.register("potted_sapling_pine",
+			() -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT.delegate.get(), () -> SAPLING_PINE.get().delegate.get(), Properties.of(Material.DECORATION).strength(0.0F)));
 	public static final RegistryObject<Block> POTTED_SAPLING_COCO = BLOCKS.register("potted_sapling_coco",
 			() -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT.delegate.get(), () -> SAPLING_COCO.get().delegate.get(), Properties.of(Material.DECORATION).strength(0.0F)));
 	public static final RegistryObject<Block> POTTED_SAPLING_DREAM = BLOCKS.register("potted_sapling_dream",
@@ -484,8 +495,13 @@ public class BlockRegistry
 
 //	public static final RegistryObject<Block> CRAFTER = BLOCKS.register("crafter", () -> new EmoCrafter(Properties.of(Material.STONE).strength(0.5f)));
 
-	public static void init()
+	public static void init(IEventBus eventBus)
 	{
-		BLOCKS.register(MainRegistry.eventBus);
+		BLOCKS.register(eventBus);
+	}
+
+	private static boolean always(BlockState state, BlockGetter getter, BlockPos pos)
+	{
+		return true;
 	}
 }

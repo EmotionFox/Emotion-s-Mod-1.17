@@ -15,9 +15,9 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer;
 
 public abstract class ExoticTrunkPlacer extends TrunkPlacer
 {
-	public ExoticTrunkPlacer(int p_70268_, int p_70269_, int p_70270_)
+	public ExoticTrunkPlacer(int height, int heightRandA, int heightRandB)
 	{
-		super(p_70268_, p_70269_, p_70270_);
+		super(height, heightRandA, heightRandB);
 	}
 
 	protected static boolean placeLogOnAxis(LevelSimulatedReader reader, BiConsumer<BlockPos, BlockState> biconsumer, Random rand, BlockPos pos, TreeConfiguration config, Direction.Axis axis)

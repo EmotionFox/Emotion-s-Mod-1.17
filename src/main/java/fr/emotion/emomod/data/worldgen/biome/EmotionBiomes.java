@@ -78,7 +78,7 @@ public class EmotionBiomes
 
 	public static Biome orchardBiome(float depth, float scale, MobSpawnSettings.Builder spawnSettings)
 	{
-		BiomeGenerationSettings.Builder generationSettings = (new BiomeGenerationSettings.Builder()).surfaceBuilder(SurfaceBuilders.GRASS);
+		BiomeGenerationSettings.Builder generationSettings = (new BiomeGenerationSettings.Builder()).surfaceBuilder(SurfaceBuilderRegistry.CSB_ORCHARD.get());
 
 		BiomeDefaultFeatures.addDefaultOverworldLandStructures(generationSettings);
 		BiomeDefaultFeatures.addDefaultCarvers(generationSettings);
@@ -94,10 +94,10 @@ public class EmotionBiomes
 		BiomeDefaultFeatures.addSurfaceFreezing(generationSettings);
 		EmotionBiomeFeatures.addOrchardVegetation(generationSettings);
 
-		generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FeatureRegistry.CF_CHERRY_TREE);
-		generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FeatureRegistry.CF_PEAR_TREE);
-		generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FeatureRegistry.CF_ORANGE_TREE);
-		
+		generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FeatureRegistry.CF_CHERRY_TREE.get());
+		generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FeatureRegistry.CF_PEAR_TREE.get());
+		generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FeatureRegistry.CF_ORANGE_TREE.get());
+
 		return (new Biome.BiomeBuilder()).precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.FOREST).depth(depth).scale(scale).temperature(0.8F).downfall(0.7f)
 				.specialEffects((new BiomeSpecialEffects.Builder()).waterColor(0x2f59d3).waterFogColor(0x2f59d3).skyColor(calculateSkyColor(0xFFbcf2ff)).ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS).build())
 				.mobSpawnSettings(spawnSettings.build()).generationSettings(generationSettings.build()).build();
@@ -126,7 +126,7 @@ public class EmotionBiomes
 
 	public static Biome stonyBiome(float depth, float scale, MobSpawnSettings.Builder spawnSettings)
 	{
-		BiomeGenerationSettings.Builder generationSettings = (new BiomeGenerationSettings.Builder()).surfaceBuilder(SurfaceBuilderRegistry.CSB_STONY);
+		BiomeGenerationSettings.Builder generationSettings = (new BiomeGenerationSettings.Builder()).surfaceBuilder(SurfaceBuilderRegistry.CSB_STONY.get());
 
 		BiomeDefaultFeatures.addDefaultOverworldLandStructures(generationSettings);
 		BiomeDefaultFeatures.addDefaultCarvers(generationSettings);
@@ -143,7 +143,7 @@ public class EmotionBiomes
 		EmotionBiomeFeatures.addOrchardVegetation(generationSettings);
 
 //		generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FeatureRegistry.PINE_TREE);
-		generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FeatureRegistry.CF_PINE_LAYING_TREE);
+		generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FeatureRegistry.CF_PINE_LAYING_TREE.get());
 
 		return (new Biome.BiomeBuilder())
 				.precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.FOREST).depth(depth).scale(scale).temperature(0.8F).downfall(0.3f).specialEffects((new BiomeSpecialEffects.Builder()).waterColor(0x48696e)
@@ -153,7 +153,7 @@ public class EmotionBiomes
 
 	public static Biome dreamBiome(float depth, float scale, MobSpawnSettings.Builder spawnSettings)
 	{
-		BiomeGenerationSettings.Builder generationSettings = (new BiomeGenerationSettings.Builder()).surfaceBuilder(SurfaceBuilderRegistry.CSB_ORCHARD);
+		BiomeGenerationSettings.Builder generationSettings = (new BiomeGenerationSettings.Builder()).surfaceBuilder(SurfaceBuilderRegistry.CSB_DREAM.get());
 
 		BiomeDefaultFeatures.addDefaultCarvers(generationSettings);
 		BiomeDefaultFeatures.addDefaultOres(generationSettings);

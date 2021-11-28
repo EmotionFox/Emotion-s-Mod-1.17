@@ -5,6 +5,7 @@ import fr.emotion.emomod.blockentity.BasicSignBlockEntity;
 import fr.emotion.emomod.blockentity.BushBlockEntity;
 import fr.emotion.emomod.blockentity.PotBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,8 +27,8 @@ public class BlockEntityRegistry
 					BlockRegistry.POT_ORANGE.get(), BlockRegistry.POT_PEAR.get(), BlockRegistry.POT_REDCURRANT.get(), BlockRegistry.POT_STRAWBERRY.get(), BlockRegistry.POT_DREAMCURRANT.get(), BlockRegistry.POT_WATER.get(),
 					BlockRegistry.POT_LAVA.get(), BlockRegistry.POT_MILK.get(), BlockRegistry.POT_GLASS.get()).build(null));
 
-	public static void init()
+	public static void init(IEventBus eventBus)
 	{
-		BLOCK_ENTITIES.register(MainRegistry.eventBus);
+		BLOCK_ENTITIES.register(eventBus);
 	}
 }

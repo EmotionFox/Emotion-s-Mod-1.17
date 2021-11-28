@@ -1,8 +1,8 @@
 package fr.emotion.emomod.items;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IStringSerializable;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
 
 public class EmoSpellBook extends Item
 {
@@ -15,17 +15,17 @@ public class EmoSpellBook extends Item
 	}
 
 	@Override
-	public int getBurnTime(ItemStack itemStack)
+	public int getBurnTime(ItemStack itemStack, RecipeType<?> recipeType)
 	{
 		return 100;
 	}
-	
+
 	public SpellList getSpell()
 	{
 		return this.spell;
 	}
 
-	public enum SpellList implements IStringSerializable
+	public enum SpellList
 	{
 		EARTH("earth"), WATER("water"), WIND("wind"), FIRE("fire");
 
@@ -37,7 +37,7 @@ public class EmoSpellBook extends Item
 		}
 
 		@Override
-		public String getName()
+		public String toString()
 		{
 			return name;
 		}

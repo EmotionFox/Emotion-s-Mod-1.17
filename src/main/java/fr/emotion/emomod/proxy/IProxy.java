@@ -6,6 +6,8 @@ import net.minecraft.world.level.Level;
 public interface IProxy
 {
 	void init();
-    Level getClientLevel();
-    Player getClientPlayer();
+
+	Level getClientLevel();
+
+	Player getClientPlayer();
 }

@@ -16,6 +16,7 @@ import fr.emotion.emomod.entity.OrbSpellEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -47,9 +48,9 @@ public class EntityTypeRegistry
 					BlockRegistry.PINE_WALL_SIGN.get(), BlockRegistry.COCO_WALL_SIGN.get(), BlockRegistry.DREAM_WALL_SIGN.get(), BlockRegistry.CHERRY_SIGN.get(), BlockRegistry.PEAR_SIGN.get(), BlockRegistry.ORANGE_SIGN.get(),
 					BlockRegistry.ATLAS_SIGN.get(), BlockRegistry.PINE_SIGN.get(), BlockRegistry.COCO_SIGN.get(), BlockRegistry.DREAM_SIGN.get()).build(null));
 
-	public static void init()
+	public static void init(IEventBus eventBus)
 	{
-		ENTITIES.register(MainRegistry.eventBus);
-		BLOCK_ENTITIES.register(MainRegistry.eventBus);
+		ENTITIES.register(eventBus);
+		BLOCK_ENTITIES.register(eventBus);
 	}
 }

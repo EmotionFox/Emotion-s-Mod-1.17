@@ -20,7 +20,7 @@ public class BasicTreeGrower extends AbstractTreeGrower
 	protected ConfiguredFeature<TreeConfiguration, ?> getConfiguredFeature(Random rand, boolean bee)
 	{
 		if (feature == null)
-			return FeatureRegistry.CF_CHERRY_TREE; // Why Not
+			return FeatureRegistry.CF_CHERRY_TREE.get(); // Why Not
 		else
 			return this.feature;
 	}

@@ -1,52 +1,59 @@
 package fr.emotion.emomod.world.level.levelgen;
 
-import net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Executor;
 
-public final class DreamChunkGenerator extends NoiseBasedChuckGenerator
+import com.mojang.serialization.Codec;
+
+import net.minecraft.server.level.WorldGenRegion;
+import net.minecraft.world.level.LevelHeightAccessor;
+import net.minecraft.world.level.NoiseColumn;
+import net.minecraft.world.level.StructureFeatureManager;
+import net.minecraft.world.level.biome.BiomeSource;
+import net.minecraft.world.level.chunk.ChunkAccess;
+import net.minecraft.world.level.chunk.ChunkGenerator;
+import net.minecraft.world.level.levelgen.Heightmap.Types;
+import net.minecraft.world.level.levelgen.StructureSettings;
+
+public class DreamChunkGenerator extends ChunkGenerator
 {
-	public DreamChunkGenerator(IWorld worldIn, BiomeProvider biomeProviderIn, EndGenerationSettings settingsIn)
+	public DreamChunkGenerator(BiomeSource p_62144_, BiomeSource p_62145_, StructureSettings p_62146_, long p_62147_)
 	{
-		super(worldIn, biomeProviderIn, 16, 8, 256, settingsIn, true);
-	}
-	
-	@Override
-	protected double[] func_222549_a(int noiseX, int noiseZ)
-	{
-		return new double[]
-		{ (double) this.biomeProvider.func_222365_c(noiseX, noiseZ), 0.0D };
+		super(p_62144_, p_62145_, p_62146_, p_62147_);
 	}
 
 	@Override
-	protected double func_222545_a(double p_222545_1_, double p_222545_3_, int p_222545_5_)
+	protected Codec<? extends ChunkGenerator> codec()
 	{
-		return 8.0D - p_222545_1_;
-	}
-	
-	@Override
-	protected void func_222548_a(double[] noiseColumn, int noiseX, int noiseZ)
-	{
-		this.func_222546_a(noiseColumn, noiseX, noiseZ, 1368.824D, 684.412D, 17.110300000000002D, 4.277575000000001D, 500, -3000);
-	}
-
-	protected double func_222551_g()
-	{
-		return (double) ((int) super.func_222551_g() / 2);
-	}
-
-	protected double func_222553_h()
-	{
-		return 8.0D;
+		return null;
 	}
 
 	@Override
-	public int getGroundHeight()
+	public ChunkGenerator withSeed(long p_62156_)
 	{
-		return 200;
+		return null;
 	}
 
 	@Override
-	public int getSeaLevel()
+	public void buildSurfaceAndBedrock(WorldGenRegion p_62170_, ChunkAccess p_62171_)
+	{
+	}
+
+	@Override
+	public CompletableFuture<ChunkAccess> fillFromNoise(Executor p_156171_, StructureFeatureManager p_156172_, ChunkAccess p_156173_)
+	{
+		return null;
+	}
+
+	@Override
+	public int getBaseHeight(int p_156153_, int p_156154_, Types p_156155_, LevelHeightAccessor p_156156_)
 	{
 		return 0;
+	}
+
+	@Override
+	public NoiseColumn getBaseColumn(int p_156150_, int p_156151_, LevelHeightAccessor p_156152_)
+	{
+		return null;
 	}
 }

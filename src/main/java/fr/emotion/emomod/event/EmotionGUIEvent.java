@@ -19,7 +19,7 @@ public class EmotionGUIEvent
 	{
 		if (e.getGui() instanceof TitleScreen)
 		{
-			ObfuscationReflectionHelper.setPrivateValue(TitleScreen.class, (TitleScreen) e.getGui(), new PanoramaRenderer(new CubeMap(new ResourceLocation(MainRegistry.MOD_ID, "textures/gui/title/background/panorama"))), "field_209101_K");
+			ObfuscationReflectionHelper.setPrivateValue(TitleScreen.class, (TitleScreen) e.getGui(), new PanoramaRenderer(new CubeMap(new ResourceLocation(MainRegistry.MOD_ID, "textures/gui/title/background/panorama"))), "f_96729_");
 		}
 	}
 }

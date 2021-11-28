@@ -5,7 +5,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import fr.emotion.emomod.init.BlockRegistry;
-import fr.emotion.emomod.init.DimensionRegistry;
+import fr.emotion.emomod.init.LevelRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -24,7 +24,7 @@ public class TeleportationTools
 			{
 				BlockPos blockPos = pos.above(256 - pos.getY());
 
-				if (destination.dimension() == DimensionRegistry.DREAM_TYPE)
+				if (destination.dimension() == LevelRegistry.DREAM)
 				{
 					blockPos = findSpawn(destWorld, entity.blockPosition());
 
@@ -34,7 +34,7 @@ public class TeleportationTools
 
 						createIsland(destWorld, blockPos);
 					}
-				} else if (destination.dimension() == DimensionRegistry.NIGHTMARE_HELL_TYPE)
+				} else if (destination.dimension() == LevelRegistry.NIGHTMARE)
 				{
 
 				}

@@ -31,6 +31,7 @@ import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.common.TierSortingRegistry;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -224,8 +225,8 @@ public class ItemRegistry
 	public static final RegistryObject<Item> MOUSE_EGG = ITEMS.register("mouse_egg", () -> new ForgeSpawnEggItem(() -> EntityTypeRegistry.MOUSE.get(), 0xcecece, 0xbf9071, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> BOAR_EGG = ITEMS.register("boar_egg", () -> new ForgeSpawnEggItem(() -> EntityTypeRegistry.BOAR.get(), 0x141412, 0x665a37, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
-	public static void init()
+	public static void init(IEventBus eventBus)
 	{
-		ITEMS.register(MainRegistry.eventBus);
+		ITEMS.register(eventBus);
 	}
 }

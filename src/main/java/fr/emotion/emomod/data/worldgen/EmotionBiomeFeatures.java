@@ -8,7 +8,7 @@ public class EmotionBiomeFeatures
 {
 	public static void addOrchardVegetation(BiomeGenerationSettings.Builder generationSettings)
 	{
-		generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FeatureRegistry.CF_EMO_FLOWER);
-		generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FeatureRegistry.CF_ORCHARD_BERRY_BUSH);
+		generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FeatureRegistry.CF_EMO_FLOWER.get());
+		generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FeatureRegistry.CF_ORCHARD_BERRY_BUSH.get());
 	}
 }

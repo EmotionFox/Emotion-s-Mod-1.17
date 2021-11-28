@@ -1,16 +1,15 @@
 package fr.emotion.emomod.items;
 
 import fr.emotion.emomod.entity.OrbSpellEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.world.World;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 
 public class EmoStaff extends Item
 {
@@ -19,25 +18,24 @@ public class EmoStaff extends Item
 		super(properties);
 	}
 
-	public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn)
+	@Override
+	public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand)
 	{
-		Hand otherHand = handIn == Hand.MAIN_HAND ? Hand.OFF_HAND : Hand.MAIN_HAND;
-		EmoSpellBook.SpellList spell = playerIn.getHeldItem(otherHand).getItem() instanceof EmoSpellBook ? ((EmoSpellBook) playerIn.getHeldItem(otherHand).getItem()).getSpell() : null;
-		ItemStack itemStack = playerIn.getHeldItem(handIn);
+		InteractionHand offHand = hand == InteractionHand.MAIN_HAND ? InteractionHand.OFF_HAND : InteractionHand.MAIN_HAND;
+		EmoSpellBook.SpellList spell = player.getItemInHand(offHand).getItem() instanceof EmoSpellBook ? ((EmoSpellBook) player.getItemInHand(offHand).getItem()).getSpell() : null;
+		ItemStack stack = player.getItemInHand(hand);
 
-		if (spell == null)
-			return new ActionResult<>(ActionResultType.FAIL, itemStack);
+		level.playSound((Player) null, player.getX(), player.getY(), player.getZ(), SoundEvents.SNOWBALL_THROW, SoundSource.PLAYERS, 0.5F, 0.4F / (level.getRandom().nextFloat() * 0.4F + 0.8F));
 
-		worldIn.playSound((PlayerEntity) null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (random.nextFloat() * 0.4F + 0.8F));
-
-		if (!worldIn.isRemote)
+		if (!level.isClientSide())
 		{
-			OrbSpellEntity orbEntity = new OrbSpellEntity(spell, worldIn, playerIn);
-			orbEntity.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 2.5F, 1F);
-			worldIn.addEntity(orbEntity);
+			OrbSpellEntity orb = new OrbSpellEntity(spell, level);
+			orb.setOwner(player);
+			orb.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 2.5F, 1F);
+			level.addFreshEntity(orb);
 		}
 
-		playerIn.addStat(Stats.ITEM_USED.get(this));
-		return new ActionResult<>(ActionResultType.SUCCESS, itemStack);
+		player.awardStat(Stats.ITEM_USED.get(this));
+		return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
 	}
 }

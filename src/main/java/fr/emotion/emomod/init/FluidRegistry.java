@@ -4,6 +4,7 @@ import fr.emotion.emomod.MainRegistry;
 import fr.emotion.emomod.fluid.AncientWaterFluid;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -21,8 +22,8 @@ public class FluidRegistry
 		return new AncientWaterFluid.Source();
 	});
 
-	public static void init()
+	public static void init(IEventBus eventBus)
 	{
-		FLUID.register(MainRegistry.eventBus);
+		FLUID.register(eventBus);
 	}
 }
