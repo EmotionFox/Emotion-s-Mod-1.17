@@ -57,7 +57,6 @@ import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.GrassColor;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.DispenserBlock;
@@ -75,6 +74,7 @@ import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.common.world.ForgeWorldType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
@@ -102,21 +102,21 @@ public class MainRegistry
 		BlockRegistry.init(eventBus);
 		BlockEntityRegistry.init(eventBus);
 		EntityTypeRegistry.init(eventBus);
-		SurfaceBuilderRegistry.init(eventBus);
 		FluidRegistry.init(eventBus);
-		BiomeRegistry.init(eventBus);
+		SurfaceBuilderRegistry.init(eventBus);
 		BlockStateProviderTypeRegistry.init(eventBus);
 		FoliagePlacerTypeRegistry.init(eventBus);
 		FeatureRegistry.init(eventBus);
+		BiomeRegistry.init(eventBus);
 //		ContainerTypeRegistry.init();
 
 		eventBus.addListener(this::setup);
-		eventBus.addListener(this::onBiomeLoading);
 		eventBus.addListener(this::clientSetup);
 		eventBus.addListener(this::onRegisterLayerDefinitions);
 		eventBus.addListener(this::onRegisterRenderers);
 		eventBus.addListener(this::onItemColor);
 		eventBus.addListener(this::onBlockColor);
+		eventBus.addListener(EventPriority.HIGH, this::onBiomeLoading);
 		eventBus.addGenericListener(ForgeWorldType.class, this::registerWorldTypes);
 
 		MinecraftForge.EVENT_BUS.register(new EmotionOverlayEvent());
@@ -125,6 +125,8 @@ public class MainRegistry
 //		LootItemConditions.(new HarvestLevelCondition.Serializer());
 
 //		EmomodPacketHandler.registerMessages();
+
+		proxy.init();
 	}
 
 	private void setup(final FMLCommonSetupEvent event)
@@ -265,8 +267,6 @@ public class MainRegistry
 			((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockRegistry.SAPLING_COCO.get().asItem().getRegistryName(), () -> BlockRegistry.POTTED_SAPLING_COCO.get());
 			((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockRegistry.SAPLING_DREAM.get().asItem().getRegistryName(), () -> BlockRegistry.POTTED_SAPLING_DREAM.get());
 		});
-
-		proxy.init();
 	}
 
 	public void registerWorldTypes(final RegistryEvent.Register<ForgeWorldType> event)
@@ -280,25 +280,27 @@ public class MainRegistry
 
 		if (event.getName() != null)
 		{
-			if (event.getName() == Biomes.NETHER_WASTES.getRegistryName())
+			if (event.getCategory().equals(Biome.BiomeCategory.NETHER))
 			{
 				builder.getFeatures(Decoration.UNDERGROUND_ORES).add(() ->
 				{
 					return FeatureRegistry.CF_ORE_LUME_NETHER.get();
 				});
-			} else if (event.getName() == BiomeRegistry.BIOME_ANCIENT.get().getRegistryName())
-			{
-				builder.getFeatures(Decoration.VEGETAL_DECORATION).add(() ->
-				{
-					return FeatureRegistry.CF_HUGE_BLUE_MUSHROOM.get();
-				});
-			} else
+			} else if (!event.getCategory().equals(Biome.BiomeCategory.THEEND))
 			{
 				for (ConfiguredFeature<?, ?> ore : FeatureRegistry.overworldOres)
 				{
 					builder.getFeatures(Decoration.UNDERGROUND_ORES).add(() ->
 					{
 						return ore;
+					});
+				}
+
+				if (event.getName() == BiomeRegistry.BIOME_ANCIENT.get().getRegistryName())
+				{
+					builder.getFeatures(Decoration.VEGETAL_DECORATION).add(() ->
+					{
+						return FeatureRegistry.CF_HUGE_BLUE_MUSHROOM.get();
 					});
 				}
 			}

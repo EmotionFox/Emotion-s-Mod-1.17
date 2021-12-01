@@ -40,10 +40,4 @@ runData.launch
 runServer.launch
 src/generated/*
 src/test/*
-src/main/resources/assets/emomod/textures/block/*
-src/main/resources/assets/emomod/textures/entity/*
-src/main/resources/assets/emomod/textures/environment/*
-src/main/resources/assets/emomod/textures/gui/*
-src/main/resources/assets/emomod/textures/item/*
-src/main/resources/assets/emomod/textures/misc/*
-src/main/resources/assets/emomod/textures/models/*
+src/main/resources/assets/emomod/textures/

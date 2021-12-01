@@ -1,7 +1,9 @@
 package fr.emotion.emomod.proxy;
 
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.fmllegacy.server.ServerLifecycleHooks;
 
 public class ServerProxy implements IProxy
 {
@@ -20,5 +22,11 @@ public class ServerProxy implements IProxy
 	public Player getClientPlayer()
 	{
 		throw new IllegalStateException("Only run this on the client!");
+	}
+
+	@Override
+	public MinecraftServer getServerLevel()
+	{
+		return ServerLifecycleHooks.getCurrentServer();
 	}
 }

@@ -3,6 +3,7 @@ package fr.emotion.emomod.proxy;
 import fr.emotion.emomod.event.EmotionGUIEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BiomeColors;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
@@ -56,5 +57,11 @@ public class ClientProxy implements IProxy
 	public Player getClientPlayer()
 	{
 		return Minecraft.getInstance().player;
+	}
+
+	@Override
+	public MinecraftServer getServerLevel()
+	{
+		throw new IllegalStateException("Only run this on the server!");
 	}
 }
